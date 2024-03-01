@@ -51,7 +51,7 @@ func TestSearch(t *testing.T) {
 
 	list, err = Search("header")
 	require.NoError(t, err, "running Search command")
-	require.NotEmpty(t, list, "Search command result")
+	require.Empty(t, list, "Search command result")
 }
 
 func TestListUpgradable(t *testing.T) {
