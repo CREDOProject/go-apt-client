@@ -1,3 +1,4 @@
+//
 //  This file is part of go-apt-client library
 //
 //  Copyright (C) 2017  Arduino AG (http://www.arduino.cc/)
@@ -56,8 +57,7 @@ type Repository struct {
 	Distribution string
 	Components   string
 	Comment      string
-
-	configFile string
+	ConfigFile   string
 }
 
 // Equals check if the Repository metadata are equivalent to the
@@ -137,7 +137,7 @@ func parseAPTConfigFile(configPath string) (RepositoryList, error) {
 		repo := parseAPTConfigLine(line)
 		//fmt.Printf("%+v\n", repo)
 		if repo != nil {
-			repo.configFile = configPath
+			repo.ConfigFile = configPath
 			res = append(res, repo)
 		}
 	}
@@ -216,7 +216,7 @@ func RemoveRepository(repo *Repository, configFolderPath string) error {
 	}
 
 	// Read the config file that contains the repo config to remove
-	fileToFilter := repoToRemove.configFile
+	fileToFilter := repoToRemove.ConfigFile
 	data, err := os.ReadFile(fileToFilter)
 	if err != nil {
 		return fmt.Errorf("Reading config file %s: %s", fileToFilter, err)
@@ -259,7 +259,7 @@ func EditRepository(old *Repository, new *Repository, configFolderPath string) e
 	}
 
 	// Read the config file that contains the repo configuration to edit
-	fileToEdit := repoToEdit.configFile
+	fileToEdit := repoToEdit.ConfigFile
 	data, err := os.ReadFile(fileToEdit)
 	if err != nil {
 		return fmt.Errorf("Reading config file %s: %s", fileToEdit, err)
