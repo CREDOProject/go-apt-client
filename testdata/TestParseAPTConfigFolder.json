@@ -6,7 +6,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -15,7 +16,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -24,7 +26,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-updates",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": false,
@@ -33,7 +36,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "trusty-updates",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -42,7 +46,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -51,7 +56,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -60,7 +66,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-updates",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -69,7 +76,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-updates",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -78,7 +86,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -87,7 +96,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -96,7 +106,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-updates",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -105,7 +116,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-updates",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -114,7 +126,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-backports",
     "Components": "main restricted universe multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -123,7 +136,8 @@
     "URI": "http://it.archive.ubuntu.com/ubuntu/",
     "Distribution": "zesty-backports",
     "Components": "main restricted universe multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -132,7 +146,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -141,7 +156,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "main restricted",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -150,7 +166,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -159,7 +176,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "universe",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -168,7 +186,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": true,
@@ -177,7 +196,8 @@
     "URI": "http://security.ubuntu.com/ubuntu",
     "Distribution": "zesty-security",
     "Components": "multiverse",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": false,
@@ -186,7 +206,8 @@
     "URI": "http://archive.canonical.com/ubuntu",
     "Distribution": "precise",
     "Components": "partner",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": false,
@@ -195,7 +216,8 @@
     "URI": "http://archive.canonical.com/ubuntu",
     "Distribution": "precise",
     "Components": "partner",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": false,
@@ -204,7 +226,8 @@
     "URI": "http://download.ebz.epson.net/dsc/op/stable/debian/",
     "Distribution": "lsb3.2",
     "Components": "main",
-    "Comment": "disabled on upgrade to trusty disabled on upgrade to utopic"
+    "Comment": "disabled on upgrade to trusty disabled on upgrade to utopic",
+    "ConfigFile": "testdata/apt/sources.list"
   },
   {
     "Enabled": false,
@@ -213,7 +236,8 @@
     "URI": "https://apt.dockerproject.org/repo",
     "Distribution": "ubuntu-xenial",
     "Components": "main",
-    "Comment": "disabled on upgrade to yakkety"
+    "Comment": "disabled on upgrade to yakkety",
+    "ConfigFile": "testdata/apt/sources.list.d/docker.list"
   },
   {
     "Enabled": true,
@@ -222,7 +246,8 @@
     "URI": "http://dl.google.com/linux/chrome/deb/",
     "Distribution": "stable",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/google-chrome.list"
   },
   {
     "Enabled": false,
@@ -231,7 +256,8 @@
     "URI": "http://ppa.launchpad.net/js-reynaud/kicad-4/ubuntu",
     "Distribution": "yakkety",
     "Components": "main",
-    "Comment": "disabled on upgrade to yakkety"
+    "Comment": "disabled on upgrade to yakkety",
+    "ConfigFile": "testdata/apt/sources.list.d/js-reynaud-ubuntu-kicad-4-xenial.list"
   },
   {
     "Enabled": false,
@@ -240,7 +266,8 @@
     "URI": "http://ppa.launchpad.net/js-reynaud/kicad-4/ubuntu",
     "Distribution": "xenial",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/js-reynaud-ubuntu-kicad-4-xenial.list"
   },
   {
     "Enabled": false,
@@ -249,7 +276,8 @@
     "URI": "http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu",
     "Distribution": "yakkety",
     "Components": "main",
-    "Comment": "disabled on upgrade to yakkety"
+    "Comment": "disabled on upgrade to yakkety",
+    "ConfigFile": "testdata/apt/sources.list.d/kdenlive-ubuntu-kdenlive-stable-xenial.list"
   },
   {
     "Enabled": true,
@@ -258,7 +286,7 @@
     "URI": "http://ppa.launchpad.net/kdenlive/kdenlive-stable/ubuntu",
     "Distribution": "xenial",
     "Components": "main",
-    "Comment": ""
+    "ConfigFile": "testdata/apt/sources.list.d/kdenlive-ubuntu-kdenlive-stable-xenial.list"
   },
   {
     "Enabled": false,
@@ -267,7 +295,8 @@
     "URI": "http://ppa.launchpad.net/kivy-team/kivy/ubuntu",
     "Distribution": "trusty",
     "Components": "main",
-    "Comment": "disabled on upgrade to trusty"
+    "Comment": "disabled on upgrade to trusty",
+    "ConfigFile": "testdata/apt/sources.list.d/kivy-team-kivy-saucy.list"
   },
   {
     "Enabled": false,
@@ -276,7 +305,8 @@
     "URI": "http://ppa.launchpad.net/kivy-team/kivy/ubuntu",
     "Distribution": "saucy",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/kivy-team-kivy-saucy.list"
   },
   {
     "Enabled": false,
@@ -285,7 +315,8 @@
     "URI": "http://ppa.launchpad.net/mixxx/mixxx/ubuntu",
     "Distribution": "yakkety",
     "Components": "main",
-    "Comment": "disabled on upgrade to yakkety"
+    "Comment": "disabled on upgrade to yakkety",
+    "ConfigFile": "testdata/apt/sources.list.d/mixxx-ubuntu-mixxx-xenial.list"
   },
   {
     "Enabled": true,
@@ -294,7 +325,8 @@
     "URI": "http://ppa.launchpad.net/mixxx/mixxx/ubuntu",
     "Distribution": "xenial",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/mixxx-ubuntu-mixxx-xenial.list"
   },
   {
     "Enabled": false,
@@ -303,7 +335,8 @@
     "URI": "https://private-ppa.launchpad.net/commercial-ppa-uploaders/portal-slingshot/ubuntu",
     "Distribution": "quantal",
     "Components": "main",
-    "Comment": "Added by software-center; credentials stored in /etc/apt/auth.conf disabled on upgrade to quantal"
+    "Comment": "Added by software-center; credentials stored in /etc/apt/auth.conf disabled on upgrade to quantal",
+    "ConfigFile": "testdata/apt/sources.list.d/private-ppa.launchpad.net_commercial-ppa-uploaders_portal-slingshot_ubuntu.list"
   },
   {
     "Enabled": false,
@@ -312,7 +345,8 @@
     "URI": "http://download.rethinkdb.com/apt",
     "Distribution": "yakkety",
     "Components": "main",
-    "Comment": "disabled on upgrade to yakkety"
+    "Comment": "disabled on upgrade to yakkety",
+    "ConfigFile": "testdata/apt/sources.list.d/rethinkdb.list"
   },
   {
     "Enabled": true,
@@ -321,7 +355,8 @@
     "URI": "https://repo.skype.com/deb",
     "Distribution": "stable",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/skype-stable.list"
   },
   {
     "Enabled": false,
@@ -330,7 +365,8 @@
     "URI": "http://download.virtualbox.org/virtualbox/debian",
     "Distribution": "trusty",
     "Components": "contrib",
-    "Comment": "disabled on upgrade to trusty"
+    "Comment": "disabled on upgrade to trusty",
+    "ConfigFile": "testdata/apt/sources.list.d/virtualbox.list"
   },
   {
     "Enabled": true,
@@ -339,7 +375,8 @@
     "URI": "http://packages.microsoft.com/repos/vscode",
     "Distribution": "stable",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/vscode.list"
   },
   {
     "Enabled": true,
@@ -348,7 +385,8 @@
     "URI": "http://ppa.launchpad.net/webupd8team/java/ubuntu",
     "Distribution": "zesty",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/webupd8team-ubuntu-java-zesty.list"
   },
   {
     "Enabled": false,
@@ -357,6 +395,7 @@
     "URI": "http://ppa.launchpad.net/webupd8team/java/ubuntu",
     "Distribution": "zesty",
     "Components": "main",
-    "Comment": ""
+    "Comment": "",
+    "ConfigFile": "testdata/apt/sources.list.d/webupd8team-ubuntu-java-zesty.list"
   }
 ]
