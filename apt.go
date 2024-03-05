@@ -24,6 +24,7 @@ import (
 	"fmt"
 	"os/exec"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 )
@@ -185,4 +186,57 @@ func InstallDry(packs ...*Package) (output []byte, err error) {
 	}
 	cmd := exec.Command("apt-get", args...)
 	return cmd.CombinedOutput()
+}
+
+// Download triest to downlaod a set of packages
+func Download(packs ...*Package) (output []byte, err error) {
+	args := []string{"download", "-y"}
+	for _, pack := range packs {
+		if pack == nil || pack.Name == "" {
+			return nil, fmt.Errorf("apt.Download: Invalid package with empty Name")
+		}
+		args = append(args, pack.Name)
+	}
+	cmd := exec.Command("apt-get", args...)
+	return cmd.CombinedOutput()
+}
+
+// Get a list of dependencies, from the bottom up.
+func GetDependencies(packs ...*Package) (list []string, err error) {
+	args := []string{"depends", "-i", "--recurse"}
+	for _, pack := range packs {
+		if pack == nil || pack.Name == "" {
+			return nil, fmt.Errorf("apt.GetDependencies: Invalid package with empty Name")
+		}
+		args = append(args, pack.Name)
+	}
+	cmd := exec.Command("apt-cache", args...)
+	err = cmd.Run()
+	if err != nil {
+		return nil, err
+	}
+	out, err := cmd.Output()
+	if err != nil {
+		return nil, err
+	}
+	stringOutput := string(out)
+	// Obtains the output line-per-line.
+	splitOutput := strings.Split(stringOutput, "\n")
+	// Reverses it.
+	slices.Reverse(splitOutput)
+
+	depSeen := make(map[string]struct{})
+	depList := []string{}
+	for _, dep := range splitOutput {
+		split := strings.Split(dep, " ")
+		if len(split) > 0 {
+			depName := split[len(split)-1]
+			if _, ok := depSeen[depName]; ok {
+				continue // Skips to the next iteration
+			}
+			depSeen[depName] = struct{}{}
+			depList = append(depList, depName)
+		}
+	}
+	return depList, nil
 }
