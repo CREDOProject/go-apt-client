@@ -193,7 +193,7 @@ func InstallDry(packs ...*Package) (output []byte, err error) {
 func Download(pack *Package, targetPath string) (output []byte, err error) {
 	args := []string{"install", "-y", "--reinstall",
 		"-o", "Debug::NoLocking=1",
-		"-o", "dir::cache::archives=\"" + targetPath + "\"",
+		"-o", fmt.Sprintf("dir::cache::archives=\"%s\"", targetPath),
 		"--download-only"}
 	if pack == nil || pack.Name == "" {
 		return nil, fmt.Errorf("apt.Download: Invalid package with empty Name")
