@@ -189,14 +189,16 @@ func InstallDry(packs ...*Package) (output []byte, err error) {
 }
 
 // Download triest to downlaod a set of packages
-func Download(packs ...*Package) (output []byte, err error) {
-	args := []string{"download", "-y"}
-	for _, pack := range packs {
-		if pack == nil || pack.Name == "" {
-			return nil, fmt.Errorf("apt.Download: Invalid package with empty Name")
-		}
-		args = append(args, pack.Name)
+// targetPath should be absolute.
+func Download(pack *Package, targetPath string) (output []byte, err error) {
+	args := []string{"install", "-y", "--reinstall",
+		"-o", "Debug::NoLocking=1",
+		"-o", "dir::cache::archives=\"" + targetPath + "\"",
+		"--download-only"}
+	if pack == nil || pack.Name == "" {
+		return nil, fmt.Errorf("apt.Download: Invalid package with empty Name")
 	}
+	args = append(args, pack.Name)
 	cmd := exec.Command("apt-get", args...)
 	return cmd.CombinedOutput()
 }
