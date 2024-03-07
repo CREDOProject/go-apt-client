@@ -202,14 +202,12 @@ func Download(packs ...*Package) (output []byte, err error) {
 }
 
 // Get a list of dependencies, from the bottom up.
-func GetDependencies(packs ...*Package) (list []string, err error) {
+func GetDependencies(pack *Package) (list []string, err error) {
 	args := []string{"depends", "-i", "--recurse"}
-	for _, pack := range packs {
-		if pack == nil || pack.Name == "" {
-			return nil, fmt.Errorf("apt.GetDependencies: Invalid package with empty Name")
-		}
-		args = append(args, pack.Name)
+	if pack == nil || pack.Name == "" {
+		return nil, fmt.Errorf("apt.GetDependencies: Invalid package with empty Name")
 	}
+	args = append(args, pack.Name)
 	cmd := exec.Command("apt-cache", args...)
 	out, err := cmd.Output()
 	if err != nil {
@@ -227,6 +225,9 @@ func GetDependencies(packs ...*Package) (list []string, err error) {
 		split := strings.Split(dep, " ")
 		if len(split) > 0 {
 			depName := split[len(split)-1]
+			if depName == "" || strings.Compare(depName, pack.Name) == 0 {
+				continue
+			}
 			if _, ok := depSeen[depName]; ok {
 				continue // Skips to the next iteration
 			}
