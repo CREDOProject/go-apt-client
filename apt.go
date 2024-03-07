@@ -211,10 +211,6 @@ func GetDependencies(packs ...*Package) (list []string, err error) {
 		args = append(args, pack.Name)
 	}
 	cmd := exec.Command("apt-cache", args...)
-	err = cmd.Run()
-	if err != nil {
-		return nil, err
-	}
 	out, err := cmd.Output()
 	if err != nil {
 		return nil, err
