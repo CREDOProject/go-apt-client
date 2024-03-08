@@ -22,7 +22,9 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"os"
 	"os/exec"
+	"path"
 	"regexp"
 	"slices"
 	"strconv"
@@ -197,6 +199,12 @@ func Download(pack *Package, targetPath string) (output []byte, err error) {
 	}
 	if pack == nil || pack.Name == "" {
 		return nil, fmt.Errorf("apt.Download: Invalid package with empty Name")
+	}
+	// This is to resolve an issue with apt not always creating a "partial"
+	// directory in the target cache directory. SMH.
+	err = os.MkdirAll(path.Join(targetPath, "partial"), 0755)
+	if err != nil {
+		return nil, err
 	}
 	args = append(args, pack.Name)
 	cmd := exec.Command("apt-get", args...)
