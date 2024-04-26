@@ -165,8 +165,12 @@ func Remove(packs ...*Package) (output []byte, err error) {
 }
 
 // Install installs a set of packages
-func Install(packs ...*Package) (output []byte, err error) {
-	args := []string{"install", "-y"}
+func Install(targetPath string, packs ...*Package) (output []byte, err error) {
+	args := []string{"install", "-y", "--reinstall"}
+	if targetPath != "" {
+		args = append(args,
+			"-o", fmt.Sprintf("Dir::Cache::archives=%s", targetPath))
+	}
 	for _, pack := range packs {
 		if pack == nil || pack.Name == "" {
 			return nil, fmt.Errorf("apt.Install: Invalid package with empty Name")
