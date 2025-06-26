@@ -89,7 +89,7 @@ func parseDpkgQueryOutput(out []byte) []*Package {
 // CheckForUpdates runs an apt update to retrieve new packages available
 // from the repositories
 func CheckForUpdates() (output []byte, err error) {
-	cmd := exec.Command("apt-get", "update", "-q")
+	cmd := exec.Command("apt-get", "update", "-yq")
 	return cmd.CombinedOutput()
 }
 
